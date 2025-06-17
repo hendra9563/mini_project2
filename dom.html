@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="container">Phincon Academy</div>
+    <div class="red">Red Class</div>
+    <div class="red">Red Class</div>
+    <div class="red">Red Class</div>
+    <h3>Select Gender</h3>
+    <input id="female" type="radio" name="gender" value="female" />
+    <label for="male"> Male </label>
+    <input id="female" type="radio" name="gender" value="female" />
+    <label for="female"> Female </label>
+    <div id="containerOne">Phincon Academy</div>
+    <div id="containerTwo">Phincon Academy</div>
+    <div id="containerThree">Phincon Academy</div>
+    <div id="containerFour">Container Four</div>
+    <div id="containerFive">
+      <div id="children1">Children 1</div>
+      <div id="children2">Children 2</div>
+    </div>
+
+    <script>
+      let container = document.getElementById("container");
+      console.log(container);
+      let redClasses = document.getElementsByClassName("red");
+      console.log(redClasses);
+      let gender = document.getElementsByName("gender");
+      console.log(gender);
+      let containerQuery = document.querySelector("#container");
+      console.log(containerQuery);
+      let redClassQuery = document.querySelectorAll(".red");
+      console.log(redClassQuery);
+
+      let containerOne = document.getElementById("containerOne");
+      containerOne.innerHTML = "<p> Hello Phincon Academy </p>";
+      let containerTwo = document.querySelector("#containerTwo");
+      containerTwo.innerHTML = "Hello Phincon Academy";
+      let containerThree = document.querySelector("#containerThree");
+      containerThree.innerHTML = "Hello Phincon Academy";
+      containerThree.style.color = "white";
+      containerThree.style.backgroundColor = "black";
+      let containerFour = document.querySelector("#containerFour");
+      containerFour.innerHTML = "Container Four Updated";
+      containerFour.style.color = "red";
+      containerFour.style.backgroundColor = "yellow";
+
+      let childrenOne = document.getElementById("children1");
+      let childrenOneParent = childrenOne.parentNode;
+      console.log(childrenOneParent);
+      let childrenTwo = document.getElementById("children2");
+      let childrenTwoParent = childrenTwo.parentNode;
+      console.log(childrenTwoParent);
+      let containerFive = document.getElementById("containerFive");
+      let childrenContainerFive = containerFive.childNodes;
+      console.log(childrenContainerFive);
+      let firstChildContainerFive = containerFive.firstChild;
+      console.log(firstChildContainerFive);
+      let lastChildContainerFive = containerFive.lastChild;
+      console.log(lastChildContainerFive);
+      let nextSiblingContainerFive = containerFive.nextSibling;
+      console.log(nextSiblingContainerFive);
+      let previousSiblingChildrenTwo = childrenTwo.previousSibling;
+      console.log(previousSiblingChildrenTwo);
+    </script>
+  </body>
+</html>
